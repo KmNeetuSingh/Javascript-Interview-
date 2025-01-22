@@ -1,0 +1,48 @@
+<!-- Event  delegation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            margin: 4px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Delegation Example</h1>
+    <ul id="list"></ul>
+    <button id="add-item">Add Item</button>
+
+    <script>
+        // Get references to the elements
+        const ul = document.getElementById('list');
+        const addItemButton = document.getElementById('add-item');
+
+        // Attach an event listener to the <ul> for delegation
+        ul.addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI') {
+                console.log(`You clicked on: ${event.target.textContent}`);
+                event.target.style.backgroundColor = '#f0f0f0'; // Highlight the clicked item
+            }
+        });
+
+        // Dynamically add new <li> elements
+        let itemCount = 1;
+        addItemButton.addEventListener('click', () => {
+            const li = document.createElement('li');
+            li.textContent = `Item ${itemCount++}`;
+            ul.appendChild(li);
+        });
+    </script>
+</body>
+</html>

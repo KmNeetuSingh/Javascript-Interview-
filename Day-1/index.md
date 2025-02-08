@@ -1,4 +1,4 @@
-1. In a relational database, relational means that data is stored in tables connected by common fields. For example, a company database may have a Customers table that contains customer details and an Orders table that contains order details. These two tables are related through a "CustomerID" field so you can tell which customer made which order.
+1. In a relational database, relational means that data is stored in tables connected by common fields. For example, a company database may have a Customers table that contains customer details and an Orders table that contains order details. These two tables are related through a CustomerID field so you can tell which customer made which order.
 
 2. Keys uniquely identify records and establish relationships between tables. A **Primary Key** uniquely identifies each record in a table. A **Foreign Key** refers to the Primary Key of another table to establish a relationship. For instance, in an e-commerce database, the "Products" table has "ProductID" as a Primary Key; the "OrderDetails" table will have "ProductID" as a Foreign Key in order to connect orders with respective products.
 
@@ -19,9 +19,9 @@ Isolation: Ensures that several transactions don't interleave. For instance, two
 
 8. A transaction is a set of database operations that execute as a single unit. For example, in an online purchase, there will be stock deducted, updating user payment history, and generation of receipt. In case any of these steps fail, the whole transaction will roll back to maintain data consistency.
 
-9. Indexing improves query performance as it provides a data structure to speed up searches. For instance, looking for a student by "StudentID" in a large table will be faster if there is an index on "StudentID" than to scan the entire table.
+9. Indexing improves query performance as it provides a data structure to speed up searches. For instance, looking for a student by StudentID in a large table will be faster if there is an index on "StudentID" than to scan the entire table.
 
-10. Foreign Keys link tables together and maintain the integrity of related data. They prevent orphan records, for example, an order existing without a valid customer. If the "Orders" table contains a "CustomerID" that does not exist in the "Customers" table, the database will prevent adding such an order.
+10. Foreign Keys link tables together and maintain the integrity of related data. They prevent orphan records, for example, an order existing without a valid customer. If the Orders table contains a CustomerID that does not exist in the Customers table, the database will prevent adding such an order.
 
 11. Data consistency ensures that database information follows rules and remains accurate. For instance, if a bank transfer updates one account but not the other, the data becomes inconsistent. The **Consistency** property in ACID ensures that all changes follow database rules, maintaining integrity.  
 

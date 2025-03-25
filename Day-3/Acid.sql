@@ -1,8 +1,9 @@
--- let's discuss about he acid properties of the database
+-- let's discuss about the acid properties of the database
 -- Atomicity
 -- Consistency
 -- Isolation
 -- Durability
+
 Start transaction;
 update  transaction set amount = amount + 100 where customer_id = 1;
 -- Consistency
